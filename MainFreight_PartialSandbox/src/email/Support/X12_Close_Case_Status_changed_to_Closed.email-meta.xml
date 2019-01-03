@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Informs to the Contact ( Customer ) about the Case closure.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Support</letterhead>
+    <name>12. Close Case - Status changed to Closed</name>
+    <style>freeForm</style>
+    <subject>Inquiry Closed: {!Case.CaseNumber}</subject>
+    <textOnly>Hello {!Contact.FirstName},
+
+We have come to a resolution on inquiry {!Case.CaseNumber} and has now been determined as closed.
+
+If you feel you require any additional assistance on this issue, please call us directly at 800-486-8326.
+
+
+Sincerely,
+{!User.FirstName}
+
+
+[{!Case.Thread_Id}]</textOnly>
+    <type>html</type>
+</EmailTemplate>

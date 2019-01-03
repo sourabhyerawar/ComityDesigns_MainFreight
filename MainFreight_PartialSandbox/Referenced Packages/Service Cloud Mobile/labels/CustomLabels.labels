@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>sf_scm_case_assigned_to_me_subtitle</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Subtitle text for a Case Assigned to Me notification</shortDescription>
+        <value>Assigned by {0} • Case #{1}</value>
+    </labels>
+    <labels>
+        <fullName>sf_scm_case_assigned_to_me_title</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Title text for a Case Assigned to Me notification</shortDescription>
+        <value>A case has been assigned to you</value>
+    </labels>
+    <labels>
+        <fullName>sf_scm_case_assigned_to_queue_subtitle</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Subtitle text for a Case Assigned to Queue notification</shortDescription>
+        <value>Assigned by {0} • Case #{1}</value>
+    </labels>
+    <labels>
+        <fullName>sf_scm_case_assigned_to_queue_title</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Title text for a Case Assigned to Queue notification</shortDescription>
+        <value>A case has been assigned to &quot;{0}&quot;</value>
+    </labels>
+    <labels>
+        <fullName>sf_scm_case_at_mention_subtitle</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Subtitle text for a Case @mention notification</shortDescription>
+        <value>Mentioned by {0} • Case #{1}</value>
+    </labels>
+    <labels>
+        <fullName>sf_scm_case_at_mention_title</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Title text for a Case @mention notification</shortDescription>
+        <value>You were mentioned on a case</value>
+    </labels>
+    <labels>
+        <fullName>sf_scm_default_message</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Default message for a notification if a case subject is null</shortDescription>
+        <value>(No Subject)</value>
+    </labels>
+</CustomLabels>

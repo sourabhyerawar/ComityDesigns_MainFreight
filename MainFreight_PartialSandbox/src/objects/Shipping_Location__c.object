@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Shipping_Location_Lightning_Layout</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>Shipping_locations_compact_layout</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>Shipping_locations_compact_layout</fullName>
+        <fields>Name</fields>
+        <fields>Shipping_Locations_Account__c</fields>
+        <fields>Account_Lookup__c</fields>
+        <fields>Active__c</fields>
+        <fields>Shipping_Location_Account_Address__c</fields>
+        <label>Shipping locations compact layout</label>
+    </compactLayouts>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Provides many to many relationship with Account.
+
+1. An Account may have multiple Shipping Locations.
+2. A Shipping Location may have an association with multiple Accounts.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Account_Lookup__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <inlineHelpText>A Shipping Location may have an association with an Account.</inlineHelpText>
+        <label>Account Lookup</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Shipping Locations</relationshipLabel>
+        <relationshipName>ShippingLocations1</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Active__c</fullName>
+        <defaultValue>true</defaultValue>
+        <description>Define if the Shipping Location association is Active. The field is checked by default.</description>
+        <externalId>false</externalId>
+        <label>Active</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Shipping_Location_Account_Address__c</fullName>
+        <externalId>false</externalId>
+        <formula>Shipping_Locations_Account__r.ShippingStreet + 
+IF( ISBLANK( Shipping_Locations_Account__r.ShippingStreet ) || ISBLANK( Shipping_Locations_Account__r.ShippingCity ), &apos; &apos;, &apos;,&apos; ) +
+
+Shipping_Locations_Account__r.ShippingCity + 
+IF( ISBLANK( Shipping_Locations_Account__r.ShippingCity ) || ISBLANK( Shipping_Locations_Account__r.ShippingState ), &apos; &apos;, &apos;,&apos; ) +
+
+Shipping_Locations_Account__r.ShippingState + 
+IF( ISBLANK( Shipping_Locations_Account__r.ShippingState ) || ISBLANK( Shipping_Locations_Account__r.ShippingCountry ), &apos; &apos;, &apos;,&apos; ) + 
+
+Shipping_Locations_Account__r.ShippingCountry + 
+IF( ISBLANK( Shipping_Locations_Account__r.ShippingCountry ) || ISBLANK( Shipping_Locations_Account__r.ShippingPostalCode ), &apos; &apos;, &apos;,&apos; ) + 
+
+Shipping_Locations_Account__r.ShippingPostalCode</formula>
+        <label>Shipping Location Account Address</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Shipping_Locations_Account__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Every shipping location must have a parent account.</inlineHelpText>
+        <label>Shipping Locations</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Shipping Locations (Lookup)</relationshipLabel>
+        <relationshipName>ShippingLocations</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <label>Shipping Location</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>Shipping_Locations_Account__c</columns>
+        <columns>Account_Lookup__c</columns>
+        <columns>NAME</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>SL-{0000}</displayFormat>
+        <label>Shipping Location Name</label>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Shipping Locations</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Account_Lookup__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Shipping_Locations_Account__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Shipping_Location_Account_Address__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Active__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CREATED_DATE</customTabListAdditionalFields>
+        <customTabListAdditionalFields>LAST_UPDATE</customTabListAdditionalFields>
+        <searchResultsAdditionalFields>Account_Lookup__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Shipping_Locations_Account__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Shipping_Location_Account_Address__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Active__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CREATED_DATE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>LAST_UPDATE</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Not_Allowed_For_Non_Admin_Users</fullName>
+        <active>true</active>
+        <errorConditionFormula>LastModifiedBy.IsActive</errorConditionFormula>
+        <errorMessage>Sorry, You are not authorized to create this record</errorMessage>
+    </validationRules>
+</CustomObject>

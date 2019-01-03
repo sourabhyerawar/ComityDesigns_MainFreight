@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This is used in Case Auto Response rule.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Support</letterhead>
+    <name>2. Claims</name>
+    <style>freeForm</style>
+    <subject>New Claim Inquiry was received: {!Case.CaseNumber}</subject>
+    <textOnly>Hello {!Contact.FirstName},
+
+Thank you for contacting Mainfreight San Francisco.
+
+Your claim request has been received.
+
+One of our customer service team members will be reaching out to you shortly. Please refer to your inquiry number {!Case.CaseNumber} for reference in any future correspondence.
+
+Sincerely,
+{!User.FirstName}
+
+{!User.FirstName} {!User.LastName} | {!User.Title}
+Mainfreight San Francisco | 50 Tanforan Ave. | South San Francisco | CA 94080
+D {!User.Phone}
+
+
+[{!Case.Thread_Id}]</textOnly>
+    <type>html</type>
+</EmailTemplate>

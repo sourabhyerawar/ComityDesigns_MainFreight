@@ -1,0 +1,36 @@
+<STYLE type="text/css">
+			.text { font-family: Verdana, sans-serif; font-size: 8pt } 
+			.textbold { font-weight:bold }
+			.textlft { text-align:left }
+			.textrt { text-align:right } 
+			.textctr { text-align:center } 
+			.tinytext { font-family: Verdana, sans-serif; font-size: 7pt; color: #888888 }
+			
+			.tg { border-collapse:collapse;border-spacing:0; width : 65%; }
+			.tg td { font-family:Verdana, sans-serif;
+					font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal; 
+			}
+			.tg th { font-family:Verdana, sans-serif;
+					font-size:14px;font-weight:normal;
+					padding:10px 5px;border-style:solid;border-width:1px;
+					overflow:hidden;word-break:normal; 
+			}
+			.cellColor { background: #7aabde; }
+			.shipmentTblCell { width : 14%; }
+			.detailsTblCell { width : 21%; }
+		</STYLE>
+
+<table class="tg" align="center" style="border-collapse:collapse;border-spacing:0; width : 65%;">
+				<tr>
+					<td class="text textbold cellColor" align="left">Action Request</td>
+					<td class="text" style="background: #7aabde;">{!Case.Type}</td>
+					<td class="text textbold cellColor" align="left">Created By</td>
+					<td class="text">{!Case.CreatedBy}</td>
+				</tr>
+				<tr>
+					<td class="text textbold cellColor" align="left">Action</td>
+					<td class="text">{!Case.CaseNumber}</td>
+					<td class="text textbold cellColor" align="left">Date Created</td>
+					<td class="text">{!Case.CreatedDate}</td>
+				</tr>
+			</table>

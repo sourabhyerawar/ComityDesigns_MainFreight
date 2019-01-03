@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Shipping Location</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Shipping Locations</value>
+    </caseValues>
+    <fields>
+        <help><!-- A Shipping Location may have an association with an Account. --></help>
+        <label><!-- Account Lookup --></label>
+        <name>Account_Lookup__c</name>
+        <relationshipLabel><!-- Shipping Locations --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Active --></label>
+        <name>Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- Shipping Location Account Address --></label>
+        <name>Shipping_Location_Account_Address__c</name>
+    </fields>
+    <fields>
+        <help><!-- Every shipping location must have a parent account. --></help>
+        <label><!-- Shipping Locations --></label>
+        <name>Shipping_Locations_Account__c</name>
+        <relationshipLabel><!-- Shipping Locations (Lookup) --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Shipping Location Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Sorry, You are not authorized to create this record --></errorMessage>
+        <name>Not_Allowed_For_Non_Admin_Users</name>
+    </validationRules>
+</CustomObjectTranslation>

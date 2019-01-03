@@ -1,0 +1,3187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ChangeStatus</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CloneAsChild</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CloseCase</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>MassClose</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>NewCase</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <businessProcesses>
+        <fullName>Standard Support Process</fullName>
+        <isActive>true</isActive>
+        <values>
+            <fullName>Action Request - Audit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Action Request - Implementation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Action Request - Investigation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incoming Response</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Waiting on 3rd Party</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting on Customer</fullName>
+            <default>false</default>
+        </values>
+    </businessProcesses>
+    <compactLayoutAssignment>Case_Compact_Layout</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>Case_Compact_Layout</fullName>
+        <fields>Subject</fields>
+        <fields>OwnerId</fields>
+        <fields>Priority</fields>
+        <fields>Status</fields>
+        <fields>CaseNumber</fields>
+        <fields>Origin</fields>
+        <fields>Department__c</fields>
+        <label>Case Compact Layout</label>
+    </compactLayouts>
+    <enableFeeds>true</enableFeeds>
+    <fields>
+        <fullName>AccountId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Account_Owner__c</fullName>
+        <externalId>false</externalId>
+        <formula>Account.Owner.Id</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Account Owner</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Account_Type__c</fullName>
+        <description>Field used for the Action Request Case to define the Case Type.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This is a read only field and auto populated from Account-Action Request Type.</inlineHelpText>
+        <label>Account Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Standard</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Align Technology</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Blackhawk Network</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Carl Zeiss Meditec</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Nutanix</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Action_Request_Assigned_By__c</fullName>
+        <externalId>false</externalId>
+        <formula>Owner:User.FirstName+ &quot;  &quot; +Owner:User.LastName</formula>
+        <label>Assigned By</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Action_Request_Category__c</fullName>
+        <externalId>false</externalId>
+        <label>Action Request Category</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Account_Type__c</controllingField>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Accuracy</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Billing Accuracy</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Billing Timeliness</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Change in Requirements</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Communication</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Customs Clearance Delay</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Damage Shipment/Piece</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Data Integrity</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Documentation Issue</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>IT Issue</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Inventory Discrepancy</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Overage</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Shortage</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>System Bug</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Transit Delay</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Unprofessional Conduct</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Event - Accuracy</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Event - Damage</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Event - Transit Delay</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Non Event - Accuracy</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Non Event - Damage</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Non Event - Transit Delay</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Cards - Damage Shipment Concealed</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Cards - Damage Shipment Visible</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Cards - Communication</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Cards - Transit Time Delay</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Non Cards - Damage Shipment Concealed</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Non Cards - Damage Shipment Visible</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Non Cards - Communication</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Non Cards - Transit Time Delay</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Business Scope Change</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Communication Issue</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Inventory in Dublin</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>KMAT Configuration Issue</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>KMAT Issue</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Order Delay</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Order Issue</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Over, Short, Damaged</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Pending Order (Ship With)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>PGI Issue</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Pick Error</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Picking Error</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Receipt Error</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Stock Out</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Zeiss Order Issue</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>*MoM Metric* Incorrect Item Shipped (Pick Performance)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Contents Damaged</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Crate Damaged</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Data Integrity Issue</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Delivery made outside of delivery window (early or late)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Incorrect communication/ instructions not followed</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Incorrect type of delivery service (i.e. should have been a meet and greet but wasn&apos;t)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Poor Communication</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Receipt Error - Incorrect Item</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Receipt Error - Incorrect Status (i.e. Empty/Full/ QI)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Receipt Error - Received Late (&gt;24hrs)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Escalation - Account Support</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Escalation - Damage</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Escalation - Loss</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Escalation - Process SOP</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Escalation - Reporting</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Escalation - Shipping Delays</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Communication Late Response</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Damage</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Damage Product</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Damage General</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Delivery Not Made</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Poor SOP</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Shipment Tracking</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Shipping Delays</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Standard</controllingFieldValue>
+                <controllingFieldValue>Carl Zeiss Meditec</controllingFieldValue>
+                <valueName>Accuracy</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Standard</controllingFieldValue>
+                <valueName>Billing Accuracy</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Standard</controllingFieldValue>
+                <valueName>Billing Timeliness</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Standard</controllingFieldValue>
+                <valueName>Change in Requirements</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Standard</controllingFieldValue>
+                <controllingFieldValue>Carl Zeiss Meditec</controllingFieldValue>
+                <valueName>Communication</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Standard</controllingFieldValue>
+                <valueName>Customs Clearance Delay</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Standard</controllingFieldValue>
+                <valueName>Damage Shipment/Piece</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Standard</controllingFieldValue>
+                <controllingFieldValue>Carl Zeiss Meditec</controllingFieldValue>
+                <valueName>Data Integrity</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Standard</controllingFieldValue>
+                <valueName>Documentation Issue</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Standard</controllingFieldValue>
+                <controllingFieldValue>Carl Zeiss Meditec</controllingFieldValue>
+                <valueName>IT Issue</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Standard</controllingFieldValue>
+                <controllingFieldValue>Carl Zeiss Meditec</controllingFieldValue>
+                <controllingFieldValue>Nutanix</controllingFieldValue>
+                <valueName>Inventory Discrepancy</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Standard</controllingFieldValue>
+                <valueName>Overage</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Standard</controllingFieldValue>
+                <valueName>Shortage</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Standard</controllingFieldValue>
+                <valueName>System Bug</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Standard</controllingFieldValue>
+                <valueName>Transit Delay</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Standard</controllingFieldValue>
+                <controllingFieldValue>Carl Zeiss Meditec</controllingFieldValue>
+                <valueName>Unprofessional Conduct</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Align Technology</controllingFieldValue>
+                <valueName>Event - Accuracy</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Align Technology</controllingFieldValue>
+                <valueName>Event - Damage</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Align Technology</controllingFieldValue>
+                <valueName>Event - Transit Delay</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Align Technology</controllingFieldValue>
+                <valueName>Non Event - Accuracy</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Align Technology</controllingFieldValue>
+                <valueName>Non Event - Damage</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Align Technology</controllingFieldValue>
+                <valueName>Non Event - Transit Delay</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Blackhawk Network</controllingFieldValue>
+                <valueName>Cards - Damage Shipment Concealed</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Blackhawk Network</controllingFieldValue>
+                <valueName>Cards - Damage Shipment Visible</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Blackhawk Network</controllingFieldValue>
+                <valueName>Cards - Communication</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Blackhawk Network</controllingFieldValue>
+                <valueName>Cards - Transit Time Delay</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Blackhawk Network</controllingFieldValue>
+                <valueName>Non Cards - Damage Shipment Concealed</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Blackhawk Network</controllingFieldValue>
+                <valueName>Non Cards - Damage Shipment Visible</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Blackhawk Network</controllingFieldValue>
+                <valueName>Non Cards - Communication</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Blackhawk Network</controllingFieldValue>
+                <valueName>Non Cards - Transit Time Delay</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Carl Zeiss Meditec</controllingFieldValue>
+                <valueName>Business Scope Change</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Carl Zeiss Meditec</controllingFieldValue>
+                <valueName>Communication Issue</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Carl Zeiss Meditec</controllingFieldValue>
+                <valueName>Inventory in Dublin</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Carl Zeiss Meditec</controllingFieldValue>
+                <valueName>KMAT Configuration Issue</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Carl Zeiss Meditec</controllingFieldValue>
+                <valueName>KMAT Issue</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Carl Zeiss Meditec</controllingFieldValue>
+                <valueName>Order Delay</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Carl Zeiss Meditec</controllingFieldValue>
+                <valueName>Order Issue</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Carl Zeiss Meditec</controllingFieldValue>
+                <valueName>Over, Short, Damaged</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Carl Zeiss Meditec</controllingFieldValue>
+                <valueName>Pending Order (Ship With)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Carl Zeiss Meditec</controllingFieldValue>
+                <valueName>PGI Issue</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Carl Zeiss Meditec</controllingFieldValue>
+                <valueName>Pick Error</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Carl Zeiss Meditec</controllingFieldValue>
+                <valueName>Picking Error</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Carl Zeiss Meditec</controllingFieldValue>
+                <valueName>Receipt Error</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Carl Zeiss Meditec</controllingFieldValue>
+                <valueName>Stock Out</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Carl Zeiss Meditec</controllingFieldValue>
+                <valueName>Zeiss Order Issue</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Carl Zeiss Meditec</controllingFieldValue>
+                <valueName>*MoM Metric* Incorrect Item Shipped (Pick Performance)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Carl Zeiss Meditec</controllingFieldValue>
+                <valueName>Contents Damaged</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Carl Zeiss Meditec</controllingFieldValue>
+                <valueName>Crate Damaged</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Carl Zeiss Meditec</controllingFieldValue>
+                <valueName>Data Integrity Issue</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Carl Zeiss Meditec</controllingFieldValue>
+                <valueName>Delivery made outside of delivery window (early or late)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Carl Zeiss Meditec</controllingFieldValue>
+                <valueName>Incorrect communication/ instructions not followed</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Carl Zeiss Meditec</controllingFieldValue>
+                <valueName>Incorrect type of delivery service (i.e. should have been a meet and greet but wasn&apos;t)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Carl Zeiss Meditec</controllingFieldValue>
+                <controllingFieldValue>Nutanix</controllingFieldValue>
+                <valueName>Poor Communication</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Carl Zeiss Meditec</controllingFieldValue>
+                <valueName>Receipt Error - Incorrect Item</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Carl Zeiss Meditec</controllingFieldValue>
+                <valueName>Receipt Error - Incorrect Status (i.e. Empty/Full/ QI)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Carl Zeiss Meditec</controllingFieldValue>
+                <valueName>Receipt Error - Received Late (&gt;24hrs)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Carl Zeiss Meditec</controllingFieldValue>
+                <controllingFieldValue>Nutanix</controllingFieldValue>
+                <valueName>Delivery Not Made</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Nutanix</controllingFieldValue>
+                <valueName>Escalation - Account Support</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Nutanix</controllingFieldValue>
+                <valueName>Escalation - Damage</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Nutanix</controllingFieldValue>
+                <valueName>Escalation - Loss</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Nutanix</controllingFieldValue>
+                <valueName>Escalation - Process SOP</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Nutanix</controllingFieldValue>
+                <valueName>Escalation - Reporting</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Nutanix</controllingFieldValue>
+                <valueName>Escalation - Shipping Delays</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Nutanix</controllingFieldValue>
+                <valueName>Communication Late Response</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Nutanix</controllingFieldValue>
+                <valueName>Damage</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Nutanix</controllingFieldValue>
+                <valueName>Damage Product</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Nutanix</controllingFieldValue>
+                <valueName>Damage General</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Nutanix</controllingFieldValue>
+                <valueName>Poor SOP</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Nutanix</controllingFieldValue>
+                <valueName>Shipment Tracking</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Nutanix</controllingFieldValue>
+                <valueName>Shipping Delays</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Action_Request_Due_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Due Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Activity_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Activity Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Investigation</fullName>
+                    <default>true</default>
+                </value>
+                <value>
+                    <fullName>Implementation</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Audit</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Closed</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>After_Closed_Email_received__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>After Closed Email received</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AssetId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Assigned_To__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Assigned To</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Cases</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Auditor_Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Auditor Comments</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>BusinessHoursId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Case_Owner_Manager__c</fullName>
+        <externalId>false</externalId>
+        <formula>If( Owner:User.Manager.FirstName != NULL, Owner:User.Manager.FirstName + &apos; &apos;, &apos;&apos; ) + Owner:User.Manager.LastName</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Case Owner Manager</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Case_Reason_Sub_Categories__c</fullName>
+        <externalId>false</externalId>
+        <label>Case Reason Sub Categories</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Reason</controllingField>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Late Receipt – ORD</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Late Receipt - LAX</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Late Receipt - DFW</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Late Receipt - EWR</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Late Receipt - ATL</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Late Receipt - SFO</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Inventory Error</controllingFieldValue>
+                <valueName>Late Receipt – ORD</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Inventory Error</controllingFieldValue>
+                <valueName>Late Receipt - LAX</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Inventory Error</controllingFieldValue>
+                <valueName>Late Receipt - DFW</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Inventory Error</controllingFieldValue>
+                <valueName>Late Receipt - EWR</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Inventory Error</controllingFieldValue>
+                <valueName>Late Receipt - ATL</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Inventory Error</controllingFieldValue>
+                <valueName>Late Receipt - SFO</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Case_Sub_Reason__c</fullName>
+        <externalId>false</externalId>
+        <label>Case Sub-Reason</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Reason</controllingField>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Shipment Tracking</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Order Tracking</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Service Issue</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Service Request</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Booking</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Billing</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Report</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Question</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Corrective Action</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Preventative Action</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Late Receipt – ORD</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Late Receipt - LAX</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Late Receipt - DFW</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Late Receipt - EWR</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Late Receipt - ATL</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Late Receipt - SFO</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Standard</controllingFieldValue>
+                <valueName>Shipment Tracking</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Standard</controllingFieldValue>
+                <valueName>Order Tracking</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Standard</controllingFieldValue>
+                <valueName>Service Issue</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Standard</controllingFieldValue>
+                <valueName>Service Request</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Standard</controllingFieldValue>
+                <valueName>Booking</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Standard</controllingFieldValue>
+                <valueName>Billing</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Standard</controllingFieldValue>
+                <valueName>Report</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Standard</controllingFieldValue>
+                <valueName>Question</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Inventory Error</controllingFieldValue>
+                <valueName>Late Receipt – ORD</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Inventory Error</controllingFieldValue>
+                <valueName>Late Receipt - LAX</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Inventory Error</controllingFieldValue>
+                <valueName>Late Receipt - DFW</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Inventory Error</controllingFieldValue>
+                <valueName>Late Receipt - EWR</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Inventory Error</controllingFieldValue>
+                <valueName>Late Receipt - ATL</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Inventory Error</controllingFieldValue>
+                <valueName>Late Receipt - SFO</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Client_Response__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Check field for case dashboard to identify if a client has responded</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The Client has responded if the box is checked</inlineHelpText>
+        <label>Client Response</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ClosedDate</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>Comments</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>ContactEmail</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>ContactFax</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>ContactId</fullName>
+        <lookupFilter>
+            <active>true</active>
+            <errorMessage>The Contact Account Name and Case Account Name does not match.</errorMessage>
+            <filterItems>
+                <field>Contact.AccountId</field>
+                <operation>equals</operation>
+                <valueField>$Source.AccountId</valueField>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ContactMobile</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>ContactPhone</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>Corrective_Action__c</fullName>
+        <externalId>false</externalId>
+        <label>Corrective Action</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Days_since_Case_Closed__c</fullName>
+        <externalId>false</externalId>
+        <formula>ClosedDate + ( ( 1 / ( 24*60 ) ) *2 )</formula>
+        <label>Days since Case Closed</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Department__c</fullName>
+        <description>1. Defines what level of service to be provided to the end customer. 
+2. Automatically get updated based on the Queue to which the Case is assigned to.</description>
+        <externalId>false</externalId>
+        <label>Department</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Domestic</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>International</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Logistics</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Shared Services</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Action Request</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Operations</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Carl Zeiss</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Control Tower</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Dispatch</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Domestic - Direct</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Domestic - Distributed</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Export</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Import</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>carl zeiss test</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Carl Zeiss FG</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>RH</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Customs Brokerage</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Ocean</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Transport Brokerage</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>General</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Accounting</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Description</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>EntitlementId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>First_response__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>First response</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Immediate_Action__c</fullName>
+        <externalId>false</externalId>
+        <label>Immediate Action</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>IsClosedOnCreate</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>IsEscalated</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>IsStopped</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>MatchOwner__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( $User.Id  =  Account_Owner__c , true, false)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>MatchOwner</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MilestoneStatus</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>MilestoneStatusIcon</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>Milestone_Warning_Violation__c</fullName>
+        <externalId>false</externalId>
+        <label>Milestone Warning / Violation</label>
+        <length>60</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Milestones_Warning_Violation_Time__c</fullName>
+        <externalId>false</externalId>
+        <label>Milestones Warning / Violation Time</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Order_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>Order Number</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Origin</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>OwnerId</fullName>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Owner_Manager_Email__c</fullName>
+        <externalId>false</externalId>
+        <label>Owner&apos;s Manager Email</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ParentId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Priority</fullName>
+        <inlineHelpText>P1 - Code Red; 
+P2 - Special attention required;
+P3 - Standard</inlineHelpText>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>ProductId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Reason</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Resolution_Warning_Violation_Time__c</fullName>
+        <externalId>false</externalId>
+        <label>Resolution Warning / Violation Time</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Resolution_Warning_Violation__c</fullName>
+        <externalId>false</externalId>
+        <label>Resolution Warning / Violation</label>
+        <length>60</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Responsible_Party__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <inlineHelpText>Only Partner or MainFreight Branch Accounts can be associated.</inlineHelpText>
+        <label>Responsible Party</label>
+        <lookupFilter>
+            <active>true</active>
+            <errorMessage>Account should be of Type either Partner or Mainfreight Branch.</errorMessage>
+            <filterItems>
+                <field>Account.Type</field>
+                <operation>equals</operation>
+                <value>Partner, Mainfreight Branch</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Responsible Party Cases</relationshipLabel>
+        <relationshipName>ResponsiblePartyCases</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Root_Cause__c</fullName>
+        <externalId>false</externalId>
+        <label>Root Cause</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Shipping_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>Shipping Number</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SlaExitDate</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>SlaStartDate</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>SourceId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Status</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>StopStartDate</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>Subject</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>SuppliedCompany</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>SuppliedEmail</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>SuppliedName</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>SuppliedPhone</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>Type</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Was_the_Action_taken_Effective__c</fullName>
+        <externalId>false</externalId>
+        <label>Was the Action taken Effective</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <listViews>
+        <fullName>Accounting_Case</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Accounting</label>
+        <queue>Accounting</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Accounts_Payable_Case</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Queue</filterScope>
+        <label>Accounts Payable</label>
+        <queue>Accounts_Payable</queue>
+        <sharedTo>
+            <roleAndSubordinates>Manager_of_Accounting_Finance</roleAndSubordinates>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Accounts_Receivable_Case</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Queue</filterScope>
+        <label>Accounts Receivable</label>
+        <queue>Accounts_Receivable</queue>
+        <sharedTo>
+            <roleAndSubordinates>Accounting_Finance_User</roleAndSubordinates>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Action_Request</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>NAME</columns>
+        <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>Activity_Type__c</columns>
+        <columns>Assigned_To__c</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>Action_Request_Due_Date__c</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>Milestone_Warning_Violation__c</columns>
+        <columns>Milestones_Warning_Violation_Time__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CASES.TYPE</field>
+            <operation>contains</operation>
+            <value>Corrective Action,Preventative Action</value>
+        </filters>
+        <label>Internal Support</label>
+    </listViews>
+    <listViews>
+        <fullName>Administration_Case</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Queue</filterScope>
+        <label>Administration</label>
+        <queue>Administration</queue>
+        <sharedTo>
+            <roleAndSubordinates>Manager_of_Administration</roleAndSubordinates>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>AllOpenCases</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>OWNER_NAME</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.ORIGIN</columns>
+        <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+        <columns>Milestone_Warning_Violation__c</columns>
+        <columns>Milestones_Warning_Violation_Time__c</columns>
+        <columns>Resolution_Warning_Violation__c</columns>
+        <columns>Resolution_Warning_Violation_Time__c</columns>
+        <columns>CASES.LAST_UPDATE_DATE_ONLY</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CASES.CLOSED</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <label>All Open Cases</label>
+        <sharedTo>
+            <group>Support_Manager</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>All_Closed_Cases</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>Account_Type__c</columns>
+        <columns>Action_Request_Category__c</columns>
+        <columns>Activity_Type__c</columns>
+        <columns>CASES.CLOSED_DATE</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CASES.CLOSED</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>All Closed Cases</label>
+        <sharedTo>
+            <group>Support_Manager</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Brokerage_Case</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Queue</filterScope>
+        <label>Brokerage</label>
+        <queue>Brokerage</queue>
+        <sharedTo>
+            <roleAndSubordinates>Manager_Of_International</roleAndSubordinates>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Carl_Zeiss_Case</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Queue</filterScope>
+        <label>Carl Zeiss</label>
+        <queue>Carl_Zeiss</queue>
+        <sharedTo>
+            <roleAndSubordinates>Manager_Of_Shared_Services</roleAndSubordinates>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Carl_Zeiss_FG_Case</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Carl Zeiss FG</label>
+        <queue>Carl_Zeiss_FG</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Cartage_Case</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Queue</filterScope>
+        <label>Cartage</label>
+        <queue>Cartage</queue>
+        <sharedTo>
+            <roleAndSubordinates>Manager_Of_Shared_Services</roleAndSubordinates>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Cases_by_Account_owner</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Team</filterScope>
+        <label>Cases by Account owner</label>
+        <sharedTo>
+            <group>Sales_Manager</group>
+            <group>Sales_User</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Control_Tower_Case</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Queue</filterScope>
+        <label>Control Tower</label>
+        <queue>Control_Tower</queue>
+        <sharedTo>
+            <roleAndSubordinates>Manager_Of_Shared_Services</roleAndSubordinates>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Dispatch_Case</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Queue</filterScope>
+        <label>Dispatch</label>
+        <queue>Dispatch</queue>
+        <sharedTo>
+            <roleAndSubordinates>Manager_Of_Shared_Services</roleAndSubordinates>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Domestic_Case</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+        <columns>Milestone_Warning_Violation__c</columns>
+        <columns>Milestones_Warning_Violation_Time__c</columns>
+        <columns>Resolution_Warning_Violation__c</columns>
+        <columns>Resolution_Warning_Violation_Time__c</columns>
+        <columns>CASES.LAST_UPDATE_DATE_ONLY</columns>
+        <filterScope>Queue</filterScope>
+        <label>Domestic</label>
+        <queue>Domestic</queue>
+        <sharedTo>
+            <roleAndSubordinates>Manager_Of_Domestic</roleAndSubordinates>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Domestic_Direct_Case</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>NAME</columns>
+        <columns>CASES.EMAIL</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Queue</filterScope>
+        <label>Domestic - Direct</label>
+        <queue>Domestic_Direct</queue>
+        <sharedTo>
+            <roleAndSubordinates>Manager_Of_Domestic</roleAndSubordinates>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Domestic_Distributed_Case</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>NAME</columns>
+        <columns>CASES.NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Queue</filterScope>
+        <label>Domestic - Distributed</label>
+        <queue>Domestic_Distributed</queue>
+        <sharedTo>
+            <roleAndSubordinates>Manager_Of_Domestic</roleAndSubordinates>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Executives_Case</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Queue</filterScope>
+        <label>Executives</label>
+        <queue>Executives</queue>
+        <sharedTo>
+            <role>Director_Services_Support</role>
+            <role>Director_of_Administration</role>
+            <role>Sales_Manager</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Export_Case</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Queue</filterScope>
+        <label>Export</label>
+        <queue>Export</queue>
+        <sharedTo>
+            <roleAndSubordinates>Manager_Of_Domestic</roleAndSubordinates>
+            <roleAndSubordinates>Manager_Of_International</roleAndSubordinates>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>General_Case</fullName>
+        <filterScope>Queue</filterScope>
+        <label>General</label>
+        <queue>General</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>General_Support_Case</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Queue</filterScope>
+        <label>General Support</label>
+        <queue>General_Support</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Import_Case</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Queue</filterScope>
+        <label>Import</label>
+        <queue>Import</queue>
+        <sharedTo>
+            <roleAndSubordinates>Manager_Of_Domestic</roleAndSubordinates>
+            <roleAndSubordinates>Manager_Of_International</roleAndSubordinates>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Information_MKTG_Case</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Information [MKTG]</label>
+        <queue>Information_MKTG</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>International_Case</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Queue</filterScope>
+        <label>International</label>
+        <queue>International</queue>
+        <sharedTo>
+            <roleAndSubordinates>Manager_Of_Domestic</roleAndSubordinates>
+            <roleAndSubordinates>Manager_Of_International</roleAndSubordinates>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Inventory_Case</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Queue</filterScope>
+        <label>Inventory</label>
+        <queue>Inventory</queue>
+        <sharedTo>
+            <roleAndSubordinates>Manager_Of_Warehouse_Fulfillment</roleAndSubordinates>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Kelly_Walsh_Open_Case</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>OWNER_NAME</field>
+            <operation>equals</operation>
+            <value>Kelly Walsh</value>
+        </filters>
+        <label>Kelly Walsh Open Cases</label>
+        <sharedTo>
+            <role>Managing_Director</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Logistics_Case</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Queue</filterScope>
+        <label>Logistics</label>
+        <queue>Logistics</queue>
+        <sharedTo>
+            <roleAndSubordinates>Manager_Of_Freight_Brokerage</roleAndSubordinates>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>MyCases</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.ORIGIN</columns>
+        <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+        <columns>CASES.LAST_UPDATE_DATE_ONLY</columns>
+        <filterScope>Mine</filterScope>
+        <label>My Cases</label>
+    </listViews>
+    <listViews>
+        <fullName>MyOpenCases</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>NAME</columns>
+        <columns>CASES.EMAIL</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+        <columns>Milestone_Warning_Violation__c</columns>
+        <columns>Milestones_Warning_Violation_Time__c</columns>
+        <columns>Resolution_Warning_Violation__c</columns>
+        <columns>Resolution_Warning_Violation_Time__c</columns>
+        <columns>CASES.LAST_UPDATE_DATE_ONLY</columns>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>CASES.CLOSED</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <label>My Open Cases</label>
+    </listViews>
+    <listViews>
+        <fullName>My_Account_Cases</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>OWNER_NAME</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>MatchOwner__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>My Account Cases</label>
+    </listViews>
+    <listViews>
+        <fullName>Not_Contacted_In_Last_48_Hours</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>Milestone_Warning_Violation__c</columns>
+        <columns>Milestones_Warning_Violation_Time__c</columns>
+        <columns>Resolution_Warning_Violation__c</columns>
+        <columns>Resolution_Warning_Violation_Time__c</columns>
+        <columns>CASES.LAST_UPDATE_DATE_ONLY</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CASES.LAST_UPDATE_DATE_ONLY</field>
+            <operation>lessThan</operation>
+            <value>LAST_N_DAYS:2</value>
+        </filters>
+        <label>Not Contacted In Last 48 Hours</label>
+        <sharedTo>
+            <group>Support_Manager</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Ocean_Case</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Queue</filterScope>
+        <label>Ocean</label>
+        <queue>Ocean</queue>
+        <sharedTo>
+            <roleAndSubordinates>Manager_Of_International</roleAndSubordinates>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Operations_Case</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Queue</filterScope>
+        <label>Operations</label>
+        <queue>Operations</queue>
+        <sharedTo>
+            <group>Operations_Team</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Q1_Case</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Queue</filterScope>
+        <label>Q1</label>
+        <queue>Q1</queue>
+        <sharedTo>
+            <role>System_Administrator</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>RH_Case</fullName>
+        <filterScope>Queue</filterScope>
+        <label>RH</label>
+        <queue>RH</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Ratings_Case</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Queue</filterScope>
+        <label>Ratings</label>
+        <queue>Ratings</queue>
+        <sharedTo>
+            <roleAndSubordinates>Manager_Of_Shared_Services</roleAndSubordinates>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Sales_Case</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Queue</filterScope>
+        <label>Sales</label>
+        <queue>Sales</queue>
+        <sharedTo>
+            <roleAndSubordinates>Sales_Manager</roleAndSubordinates>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Shared_SVCs_Case</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Queue</filterScope>
+        <label>Shared SVCs</label>
+        <queue>Shared_SVCs</queue>
+        <sharedTo>
+            <roleAndSubordinates>Manager_Of_Shared_Services</roleAndSubordinates>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Transport_Brokerage_Case</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Queue</filterScope>
+        <label>Transport/Brokerage</label>
+        <queue>Transport_Brokerage</queue>
+        <sharedTo>
+            <roleAndSubordinates>Manager_Of_Freight_Brokerage</roleAndSubordinates>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Warehouse_Case</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Queue</filterScope>
+        <label>Warehouse</label>
+        <queue>Warehouse</queue>
+        <sharedTo>
+            <roleAndSubordinates>Manager_Of_Warehouse_Fulfillment</roleAndSubordinates>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>carl_zeiss_test_Case</fullName>
+        <filterScope>Queue</filterScope>
+        <label>carl zeiss test</label>
+        <queue>carl_zeiss_test</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
+    <recordTypeTrackHistory>true</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Customer_Support</fullName>
+        <active>true</active>
+        <businessProcess>Standard Support Process</businessProcess>
+        <compactLayoutAssignment>Case_Compact_Layout</compactLayoutAssignment>
+        <label>Customer Support</label>
+        <picklistValues>
+            <picklist>Account_Type__c</picklist>
+            <values>
+                <fullName>Standard</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Action_Request_Category__c</picklist>
+            <values>
+                <fullName>Accuracy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Billing Accuracy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Billing Timeliness</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Change in Requirements</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Communication</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Customs Clearance Delay</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Damage Shipment%2FPiece</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Data Integrity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Documentation Issue</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IT Issue</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inventory Discrepancy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Overage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Shortage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>System Bug</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transit Delay</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unprofessional Conduct</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Activity_Type__c</picklist>
+            <values>
+                <fullName>Audit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Implementation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Investigation</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Case_Reason_Sub_Categories__c</picklist>
+            <values>
+                <fullName>Late Receipt %E2%80%93 ORD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Late Receipt - ATL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Late Receipt - DFW</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Late Receipt - EWR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Late Receipt - LAX</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Late Receipt - SFO</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Case_Sub_Reason__c</picklist>
+            <values>
+                <fullName>Billing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Booking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Late Receipt %E2%80%93 ORD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Late Receipt - ATL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Late Receipt - DFW</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Late Receipt - EWR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Late Receipt - LAX</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Late Receipt - SFO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Order Tracking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Question</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Report</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Service Issue</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Service Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Shipment Tracking</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Department__c</picklist>
+            <values>
+                <fullName>Accounting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Carl Zeiss</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Carl Zeiss FG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Control Tower</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Customs Brokerage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dispatch</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Domestic</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Domestic - Direct</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Domestic - Distributed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Export</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Import</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>International</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Logistics</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ocean</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Operations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RH</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Shared Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transport Brokerage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>carl zeiss test</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Origin</picklist>
+            <values>
+                <fullName>Agent Created</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>P1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>P2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>P3</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reason</picklist>
+            <values>
+                <fullName>Inventory Error</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standard</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Corrective Action</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Preventative Action</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Was_the_Action_taken_Effective__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Internal_Support</fullName>
+        <active>true</active>
+        <businessProcess>Standard Support Process</businessProcess>
+        <compactLayoutAssignment>Case_Compact_Layout</compactLayoutAssignment>
+        <label>Internal Support</label>
+        <picklistValues>
+            <picklist>Account_Type__c</picklist>
+            <values>
+                <fullName>Align Technology</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Blackhawk Network</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Carl Zeiss Meditec</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nutanix</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standard</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Action_Request_Category__c</picklist>
+            <values>
+                <fullName>*MoM Metric* Incorrect Item Shipped %28Pick Performance%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Accuracy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Billing Accuracy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Billing Timeliness</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Business Scope Change</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cards - Communication</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cards - Damage Shipment Concealed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cards - Damage Shipment Visible</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cards - Transit Time Delay</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Change in Requirements</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Communication</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Communication Issue</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Communication Late Response</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contents Damaged</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Crate Damaged</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Customs Clearance Delay</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Damage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Damage General</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Damage Product</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Damage Shipment%2FPiece</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Data Integrity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Data Integrity Issue</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Delivery Not Made</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Delivery made outside of delivery window %28early or late%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Documentation Issue</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Escalation - Account Support</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Escalation - Damage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Escalation - Loss</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Escalation - Process SOP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Escalation - Reporting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Escalation - Shipping Delays</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Event - Accuracy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Event - Damage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Event - Transit Delay</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IT Issue</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Incorrect communication%2F instructions not followed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Incorrect type of delivery service %28i%2Ee%2E should have been a meet and greet but wasn%27t%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inventory Discrepancy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inventory in Dublin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>KMAT Configuration Issue</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>KMAT Issue</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non Cards - Communication</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non Cards - Damage Shipment Concealed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non Cards - Damage Shipment Visible</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non Cards - Transit Time Delay</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non Event - Accuracy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non Event - Damage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non Event - Transit Delay</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Order Delay</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Order Issue</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Over%2C Short%2C Damaged</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Overage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PGI Issue</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pending Order %28Ship With%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pick Error</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Picking Error</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Poor Communication</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Poor SOP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Receipt Error</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Receipt Error - Incorrect Item</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Receipt Error - Incorrect Status %28i%2Ee%2E Empty%2FFull%2F QI%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Receipt Error - Received Late %28%3E24hrs%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Shipment Tracking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Shipping Delays</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Shortage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stock Out</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>System Bug</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transit Delay</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unprofessional Conduct</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Zeiss Order Issue</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Activity_Type__c</picklist>
+            <values>
+                <fullName>Audit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Implementation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Investigation</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Case_Reason_Sub_Categories__c</picklist>
+            <values>
+                <fullName>Late Receipt %E2%80%93 ORD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Late Receipt - ATL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Late Receipt - DFW</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Late Receipt - EWR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Late Receipt - LAX</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Late Receipt - SFO</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Case_Sub_Reason__c</picklist>
+            <values>
+                <fullName>Billing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Booking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Corrective Action</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Late Receipt %E2%80%93 ORD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Late Receipt - ATL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Late Receipt - DFW</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Late Receipt - EWR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Late Receipt - LAX</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Late Receipt - SFO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Order Tracking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Preventative Action</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Question</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Service Issue</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Service Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Shipment Tracking</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Department__c</picklist>
+            <values>
+                <fullName>Action Request</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Origin</picklist>
+            <values>
+                <fullName>Agent Created</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>P1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>P2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>P3</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reason</picklist>
+            <values>
+                <fullName>Standard</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Corrective Action</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Preventative Action</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Was_the_Action_taken_Effective__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>CASES.CASE_NUMBER</customTabListAdditionalFields>
+        <customTabListAdditionalFields>ACCOUNT.NAME</customTabListAdditionalFields>
+        <customTabListAdditionalFields>NAME</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CASES.SUBJECT</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CASES.STATUS</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CASES.PRIORITY</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CASES.CREATED_DATE</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CASES.LAST_UPDATE_DATE_ONLY</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>CASES.CASE_NUMBER</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CASES.SUBJECT</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>NAME</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>ACCOUNT.NAME</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CASES.STATUS</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CASES.CASE_NUMBER</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CASES.SUBJECT</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>NAME</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>ACCOUNT.NAME</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CASES.STATUS</lookupPhoneDialogsAdditionalFields>
+        <searchResultsAdditionalFields>CASES.CASE_NUMBER</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>ACCOUNT.NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CASES.SUBJECT</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CASES.PRIORITY</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CASES.STATUS</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CASES.CREATED_DATE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CASES.LAST_UPDATE_DATE_ONLY</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CORE.USERS.ALIAS</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Read</sharingModel>
+    <validationRules>
+        <fullName>AR_NonStandard_Account_Type_Validation</fullName>
+        <active>false</active>
+        <description>If Account Type = Non-Standard make sure Account&gt; Action Request Type = Non-Standard else Error</description>
+        <errorConditionFormula>RecordType.DeveloperName == &apos;Internal_Support&apos; 
+&amp;&amp;
+ISPICKVAL( Account.Action_Request_Type__c, &quot;Standard&quot; ) 
+&amp;&amp;  
+TEXT( Account_Type__c ) != &quot;Standard&quot;</errorConditionFormula>
+        <errorDisplayField>Account_Type__c</errorDisplayField>
+        <errorMessage>For Account Action Request Type = Standard, the Account Type Should be Standard.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>AR_Standard_Account_Type_Validation</fullName>
+        <active>false</active>
+        <description>If Account Type = Standard make sure Account&gt; Action Request Type = Standard else Error.</description>
+        <errorConditionFormula>RecordType.DeveloperName == &apos;Internal_Support&apos; 
+&amp;&amp;  
+ISPICKVAL( Account.Action_Request_Type__c, &quot;Non-Standard&quot; )
+&amp;&amp;
+(
+ Account.Name != TEXT( Account_Type__c )
+ ||
+ ISPICKVAL( Account_Type__c, &quot;Standard&quot; )
+)</errorConditionFormula>
+        <errorDisplayField>Account_Type__c</errorDisplayField>
+        <errorMessage>There is no Account Type and Non-standard Action Request category for this Account.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Activity_Type_should_be_closed</fullName>
+        <active>true</active>
+        <description>Activity Type should be closed as the case status is closed</description>
+        <errorConditionFormula>RecordType.DeveloperName = &apos;Internal_Support&apos; &amp;&amp;    ISPICKVAL(Status, &apos;Closed&apos;)  &amp;&amp; 
+NOT(ISPICKVAL(Activity_Type__c, &apos;Closed&apos;))</errorConditionFormula>
+        <errorDisplayField>Activity_Type__c</errorDisplayField>
+        <errorMessage>Activity Type should be closed as the case status is closed</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Fields_Cannot_Be_Changed_On_Case_Closure</fullName>
+        <active>true</active>
+        <description>When the Action Request Case is Closed the fields:
+Root Cause, Immediate Action, Corrective Action, Auditor Comments should be not editable.</description>
+        <errorConditionFormula>RecordType.DeveloperName == &apos;Internal_Support&apos; 
+
+&amp;&amp; 
+
+NOT( ISCHANGED( IsClosed ) ) &amp;&amp; ISPICKVAL( Status, &apos;Closed&apos; ) &amp;&amp; ( ISCHANGED( Root_Cause__c ) || ISCHANGED( Immediate_Action__c ) || ISCHANGED( Corrective_Action__c ) || ISCHANGED( Auditor_Comments__c ) )</errorConditionFormula>
+        <errorMessage>Root Cause, Immediate Action, Corrective Action, Auditor Comments cannot be changed once the Action Request is Closed.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Validate_Closed_Activity_Type</fullName>
+        <active>true</active>
+        <description>Root Cause, Immediate Action, Corrective Action, Auditor Comments fields cannot be empty when When Activity Type is Closed.</description>
+        <errorConditionFormula>RecordType.DeveloperName == &apos;Internal_Support&apos; 
+
+&amp;&amp; 
+
+ISPICKVAL( Activity_Type__c, &apos;Closed&apos; )
+
+&amp;&amp;
+
+( ISBLANK( Root_Cause__c ) || ISBLANK( Immediate_Action__c) || ISBLANK( Corrective_Action__c) || ISBLANK( Auditor_Comments__c ) )</errorConditionFormula>
+        <errorMessage>Root Cause, Immediate Action, Corrective Action, Auditor Comments fields cannot be empty when Activity Type is Closed.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Validate_Implementation_Activity_Type</fullName>
+        <active>true</active>
+        <description>When the Activity Type = Implementation, Root Cause, Immediate Action, Corrective Action cannot be empty.</description>
+        <errorConditionFormula>RecordType.DeveloperName == &apos;Internal_Support&apos;
+
+&amp;&amp;
+
+ISPICKVAL( Activity_Type__c, &apos;Implementation&apos; ) 
+
+&amp;&amp; 
+
+( ISBLANK( Root_Cause__c ) || ISBLANK( Immediate_Action__c) || ISBLANK( Corrective_Action__c ) )</errorConditionFormula>
+        <errorMessage>Root Cause, Immediate Action, Corrective Action fields cannot be empty when Activity Type is Implementation.</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>HTPPV__Printable_View</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Printable View</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>/apex/HTPPV__PrintableView?id={!Case.Id}</url>
+    </webLinks>
+</CustomObject>

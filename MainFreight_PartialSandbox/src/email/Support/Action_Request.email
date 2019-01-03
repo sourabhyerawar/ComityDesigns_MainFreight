@@ -1,0 +1,199 @@
+<html>
+	<head>
+		<img src="https://cs71.salesforce.com/servlet/servlet.ImageServer?id=0154D000000Dnsn&oid=00D4D0000000jHg" height="60" width="200"/><br/><br/>
+	</head>
+	
+	<body style="font-family:Verdana,sans-serif;">
+		<div>
+			<h3 style="text-align:center;"><b>Account : {!Account.Name}</b></h3>
+		</div>
+		<div>
+			<table align="center" style="border-collapse:collapse;border-spacing:0;width:65%;">
+				<tr>
+					<td align="left" style="font-weight:bold;font-size:14px;padding:10px 5px; border-style:solid;border-width:1px;overflow:hidden;word-break:normal;background:#7aabde;">
+						Action Request
+					</td>
+					<td style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;">
+						{!Case.Type}
+					</td>
+					<td align="left" style="font-weight:bold;font-size:14px;padding:10px 5px; border-style:solid;border-width:1px;overflow:hidden;word-break:normal;background:#7aabde;">
+						Created By
+					</td>
+					<td style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;">
+						{!Case.CreatedBy}
+					</td>
+				</tr>
+				<tr>
+					<td align="left" style="font-weight:bold;font-size:14px;padding:10px 5px; border-style:solid;border-width:1px;overflow:hidden;word-break:normal;background:#7aabde;">
+						Action
+					</td>
+					<td style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;">
+						{!Case.CaseNumber}
+					</td>
+					<td align="left" style="font-weight:bold;font-size:14px;padding:10px 5px; border-style:solid;border-width:1px;overflow:hidden;word-break:normal;background:#7aabde;">
+						Date Created
+					</td>
+					<td style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;">
+						{!Case.CreatedDate}
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div>
+			<h4 style="text-align:center;"><b>Milestones</b></h3>
+		</div>
+		<div>
+			<table align="center" style="border-collapse:collapse;border-spacing:0;width:65%;">
+				<thead>
+					<th style="font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;background:#7aabde;">
+						<b>Milestone</b>
+					</th>
+					<th style="font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;background:#7aabde;">
+						<b>Date Due</b>
+					</th>
+					<th style="font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;background:#7aabde;">
+						<b>Assigned To</b>
+					</th>
+					<th style="font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;background:#7aabde;">
+						<b>Assigned By</b>
+					</th>
+					<th style="font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;background:#7aabde;">
+						<b>Completed By</b>
+					</th>
+					<th style="font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;background:#7aabde;">
+						<b>Completed Date</b>
+					</th>
+				</thead>
+				<tbody>
+					<tr>
+						<td style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;">Investigation</td>
+						<td style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;"></td>
+						<td style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;"></td>
+						<td style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;"></td>
+						<td style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;"></td>
+						<td style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;"></td>
+					</tr>
+					<tr>
+						<td style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;">Implementation</td>
+						<td style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;"></td>
+						<td style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;"></td>
+						<td style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;"></td>
+						<td style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;"></td>
+						<td style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;"></td>
+					</tr>
+					<tr>
+						<td style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;">Audit</td>
+						<td style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;"></td>
+						<td style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;"></td>
+						<td style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;"></td>
+						<td style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;"></td>
+						<td style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;"></td>
+					</tr>
+					<tr>
+						<td style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;">Closed</td>
+						<td style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;"></td>
+						<td style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;"></td>
+						<td style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;"></td>
+						<td style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;"></td>
+						<td style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;"></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div>
+			<h4 style="text-align:center;"><b>Shipment/Order Data</b></h3>
+		</div>
+		<div>
+			<table align="center" style="border-collapse:collapse;border-spacing:0;width:65%;">
+				<tbody style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;">
+					<tr>
+						<td align="left" style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;font-weight:bold;background:#7aabde;">Shipment MFI #</td>
+						<td style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;width:14%;"></td>
+						<td align="left" style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;font-weight:bold;background:#7aabde;">Shipment from</td>
+						<td style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;width:14%;"></td>
+						<td align="left" style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;font-weight:bold;background:#7aabde;">Shipment to</td>
+						<td style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;width:14%;"></td>
+					</tr>
+					<tr>
+						<td align="left" style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;font-weight:bold;background:#7aabde;">Shipment ID</td>
+						<td style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;width:14%;">{!Case.Shipping_Number__c}</td>
+						<td align="left" style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;font-weight:bold;background:#7aabde;">Origin Country</td>
+						<td style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;width:14%;"></td>
+						<td align="left" style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;font-weight:bold;background:#7aabde;">Destination Country</td>
+						<td style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;width:14%;"></td>
+					</tr>
+					<tr>
+						<td align="left" style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;font-weight:bold;background:#7aabde;">Sales Order</td>
+						<td style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;width:14%;"></td>
+						<td align="left" style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;font-weight:bold;background:#7aabde;">Origin Port</td>
+						<td style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;width:14%;"></td>
+						<td align="left" style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;font-weight:bold;background:#7aabde;">Destination Port</td>
+						<td style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;width:14%;"></td>
+					</tr>
+					<tr>
+						<td align="left" style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;font-weight:bold;background:#7aabde;">Order ID</td>
+						<td style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;width:14%;"></td>
+						<td style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;font-weight:bold;background:#7aabde;"></td>
+						<td style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;width:14%;"></td>
+						<td style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;font-weight:bold;background:#7aabde;"></td>
+						<td style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;width:14%;"></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div>
+			<h4 style="text-align:center;"><b>Details</b></h4>
+		</div>
+		<div>
+			<table align="center" style="border-collapse:collapse;border-spacing:0;width:65%;">
+				<tbody style="font-size:8pt;">
+					<tr>
+						<td align="left" style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;font-weight:bold;background:#7aabde;">Originated By</td>
+						<td style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;width:21%;">{!Case.Origin}</td>
+						<td align="left" style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;font-weight:bold;background:#7aabde;">Service</td>
+						<td style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;width:21%;">{!Case.Department__c}</td>
+					</tr>
+					<tr>
+						<td align="left" style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;font-weight:bold;background:#7aabde;">Responsible Party</td>
+						<td style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;width:21%;">{!Case.Responsible_Party__c}</td>
+						<td align="left" style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;font-weight:bold;background:#7aabde;">Action Category</td>
+						<td style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;width:21%;">{!Case.Action_Request_Category__c}</td>
+					</tr>
+					<tr>
+						<td align="left" style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;font-weight:bold;background:#7aabde;">Description of Issue</td>
+						<td style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;width:21%;">{!Case.Description}</td>
+						<td align="left" style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;font-weight:bold;background:#7aabde;">Root Cause</td>
+						<td style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;width:21%;">{!Case.Root_Cause__c}</td>
+					</tr>
+					<tr>
+						<td align="left" style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;font-weight:bold;background:#7aabde;">Immediate Action Taken</td>
+						<td style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;width:21%;">{!Case.Immediate_Action__c}</td>
+						<td align="left" style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;font-weight:bold;background:#7aabde;">Corrective Taken</td>
+						<td style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;width:21%;">{!Case.Corrective_Action__c}</td>
+					</tr>
+					<tr>
+						<td align="left" style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;font-weight:bold;background:#7aabde;">Auditor's Comments</td>
+						<td style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;width:21%;">{!Case.Auditor_Comments__c}</td>
+					</tr>
+					<tr>
+						<td align="left" style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;font-weight:bold;background:#7aabde;">Agreed to by</td>
+						<td style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;width:21%;"></td>
+						<td align="left" style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;font-weight:bold;background:#7aabde;">Was Action Taken Effective?</td>
+						<td style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;width:21%;">{!Case.Was_the_Action_taken_Effective__c}</td>
+					</tr>
+					<tr>
+						<td align="left" style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;font-weight:bold;background:#7aabde;">Date</td>
+						<td style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;width:21%;">{!Case.ClosedDate}</td>
+						<td align="left" style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;font-weight:bold;background:#7aabde;">If No, New CA/PA Number</td>
+						<td style="font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;width:21%;">{!Case.Parent}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div>
+			<h5 style="text-align:center;">
+				<a href="http://www.mainfreightsfo.com/contact/">Mainfreight SFO</a> | 1-650-871-4747
+			</h5>
+		</div>
+	</body>
+</html>

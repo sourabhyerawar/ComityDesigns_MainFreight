@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>AccountId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ContactId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>EndDate</fullName>
+    </fields>
+    <fields>
+        <fullName>IsActive</fullName>
+    </fields>
+    <fields>
+        <fullName>IsDirect</fullName>
+    </fields>
+    <fields>
+        <fullName>Roles</fullName>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>StartDate</fullName>
+    </fields>
+    <validationRules>
+        <fullName>Creation_Not_Allowed_For_Non_Admin_Users</fullName>
+        <active>false</active>
+        <description>Only Users with System Administrator profile should be able to create Account Contact Relationship records.</description>
+        <errorConditionFormula>$Profile.Name != &apos;System Administrator&apos;</errorConditionFormula>
+        <errorMessage>Sorry, You are not authorized to create this record. Please contact your Manager.</errorMessage>
+    </validationRules>
+</CustomObject>

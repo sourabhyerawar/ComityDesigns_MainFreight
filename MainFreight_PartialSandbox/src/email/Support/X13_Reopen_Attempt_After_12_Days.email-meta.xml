@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Informs to the Contact ( Customer ) about the re-opening attempt to the Case.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Support</letterhead>
+    <name>13. Reopen Attempt After 12 Days</name>
+    <style>freeForm</style>
+    <subject>SLA Overdue for Case update: {!Case.CaseNumber}</subject>
+    <textOnly>Hello {!Contact.FirstName},
+
+Thank you for your message regarding {!Case.CaseNumber}.
+
+This inquiry has previously been determined to be closed. We are happy to help further with any assistance you may require. Please feel free to email at support@(dept) or call at 800-486-8326 to begin a new inquiry.
+
+
+Sincerely,
+
+Mainfreight San Francisco - Support Team
+www.mainfreightsfo.com
+800-486-8326
+
+[{!Case.Thread_Id}]</textOnly>
+    <type>html</type>
+</EmailTemplate>

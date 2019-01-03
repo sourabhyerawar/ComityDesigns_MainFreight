@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This is used in Case Auto Response rule.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Support</letterhead>
+    <name>4. Billing</name>
+    <style>freeForm</style>
+    <subject>New Billing Request for Account {!Account.Name}</subject>
+    <textOnly>Hello {!Contact.FirstName},
+
+Thank you for contacting Mainfreight San Francisco.
+
+Your billing inquiry has been received.
+
+One of our customer service team members will be reaching out to you shortly. Please refer to your inquiry number {!Case.CaseNumber} for reference in any further phone or future correspondence.
+
+If you require immediate assistance, please contact customer support directly at 800-486-8326. We are available to help.
+
+Sincerely,
+{!User.FirstName}
+
+{!User.FirstName} {!User.LastName} | {!User.Title}
+Mainfreight San Francisco | 50 Tanforan Ave. | South San Francisco | CA 94080
+D {!User.Phone}
+
+
+[{!Case.Thread_Id}]</textOnly>
+    <type>html</type>
+</EmailTemplate>

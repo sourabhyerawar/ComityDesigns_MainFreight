@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Informs to the Case&apos; Account&apos;s Owner about newly created Action Request.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Support</letterhead>
+    <name>5. Action Request Notification</name>
+    <style>freeForm</style>
+    <subject>An Action Request Notification Case was open - Case number: {!Case.CaseNumber}</subject>
+    <textOnly>Dear {!Account.OwnerFullName},
+
+This email is to inform you of the following action request:
+
+
+Action Request {!Case.CaseNumber} created
+
+Account: {!Account.Name}
+
+Action Request: {!Case.Type}
+
+Service: {!Case.Department__c}
+
+Action Type: {!Case.Activity_Type__c}
+
+Shipment MFI #:
+
+Shipment ID:
+
+Shipped from:
+
+Origin Country:
+
+Origin Port:
+
+Shipped to:
+
+Destination Country:
+
+Destination Port:
+Description of Issue: {!Case.Description}
+
+Root Cause: {!Case.Root_Cause__c}
+
+Immediate Action Taken: {!Case.Immediate_Action__c}
+
+Corrective Action: {!Case.Corrective_Action__c}
+
+
+Sincerely,
+
+Mainfreight San Francisco Support Team
+
+
+[{!Case.Thread_Id}]</textOnly>
+    <type>html</type>
+</EmailTemplate>
